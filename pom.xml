@@ -17,6 +17,8 @@
 	</modules>
 	<properties>
 		<dubbo.version>2.6.2</dubbo.version>
+		<zookeeper.version>3.4.9</zookeeper.version>
+		<curator.version>4.0.1</curator.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -24,6 +26,21 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>dubbo</artifactId>
 				<version>${dubbo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.zookeeper</groupId>
+				<artifactId>zookeeper</artifactId>
+				<version>${zookeeper.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-framework</artifactId>
+				<version>${curator.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-recipes</artifactId>
+				<version>${curator.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

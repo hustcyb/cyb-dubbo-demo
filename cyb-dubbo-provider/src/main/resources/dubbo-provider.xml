@@ -7,7 +7,8 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <dubbo:application name="cyb-dubbo-provider" />
-    <dubbo:registry address="multicast://224.5.6.7:1234" />
+    <!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
     <dubbo:protocol name="dubbo" port="20880" />
     <dubbo:service interface="com.cyb.dubbo.intf.service.DemoService" ref="demoService" />
     <bean id="demoService" class="com.cyb.dubbo.provider.service.impl.DemoServiceImpl" />
